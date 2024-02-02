@@ -52,26 +52,16 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_92355E7C057F481D8A6223D234627A8E }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_562E7463F772402592ACF02C8EBA09C6 }}
 
-      # - name: Deploy to Azure Web App
-      #   id: deploy-to-webapp
-      #   uses: azure/webapps-deploy@v2
-      #   with:
-      #     app-name: 'smartinventory-backend'
-      #     slot-name: 'Production'
-      #     package: '**/java-app*.jar'
-
-
-
-      - name: List Files in Deployment Directory
-        run: |
-          ls -R $GITHUB_WORKSPACE
-        if: always()
-
       - name: Deploy to Azure Web App
+        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-           app-name: smartinventory-backend
-           slot-name: Production
-           package: '**/java-app*.jar'
+          app-name: 'smartinventory-backend'
+          slot-name: 'Production'
+          package: '/smartInventory.jar'
+
+
+
+
 
           
