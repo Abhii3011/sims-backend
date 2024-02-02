@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'smartinventory-backend'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'java-app.jar'
           
