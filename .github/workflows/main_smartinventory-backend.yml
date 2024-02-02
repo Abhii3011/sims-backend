@@ -65,7 +65,7 @@ jobs:
       - name: List Files in Deployment Directory
         run: |
           ls -R $GITHUB_WORKSPACE
-          if: always()
+        if: always()
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
