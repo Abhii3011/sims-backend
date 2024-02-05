@@ -12,7 +12,7 @@ public class CorsConfig implements WebMvcConfigurer {
  public void addCorsMappings(CorsRegistry registry) {
      registry.addMapping("/**")
      .allowCredentials(true)
-             .allowedOrigins("http://localhost:3000") // Add your React app's URL
+             .allowedOrigins("https://brave-island-054155610.4.azurestaticapps.net/") // Add your React app's URL
              .allowedMethods("GET", "POST", "PUT", "DELETE");
  }
 }
